@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public GameObject bombButton;
     public GameObject bombButtonLock;
     public List<int> enemyList;
+    public SpawnData[] spawnData;
 
 
     void Awake() {
@@ -217,7 +218,7 @@ public class GameManager : MonoBehaviour
         int MAX_ENEMY_VARIATION = 4;
         if (enemyList.Count >= MAX_ENEMY_VARIATION)enemyList.Clear();
         while(true){
-            int rand = Random.Range(0, Spawner.spawnData.Length);
+            int rand = Random.Range(0, spawnData.Length);
             if (enemyList.Contains(rand))continue;
             enemyList.Add(rand);
             return;

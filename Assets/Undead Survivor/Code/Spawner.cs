@@ -6,8 +6,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {    
     public Transform[] spawnPoint;
-    public static SpawnData[] spawnData;
-    public float levelTime;
+    float levelTime;
     int level;
     float timer;
     float explodeTimer;
@@ -28,8 +27,8 @@ public class Spawner : MonoBehaviour
             return;
         timer += Time.deltaTime;
         //level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / levelTime), spawnData.Length - 1);
-        level = Mathf.FloorToInt(GameManager.instance.gameTime / levelTime);
-        if (timer > spawnData[getLevel()].spawnTime){
+        
+        if (timer > getSpawnTime()){
             timer = 0;
             Spawn();
         }
@@ -56,21 +55,26 @@ public class Spawner : MonoBehaviour
     void Spawn(){
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1,spawnPoint.Length)].position;  //자식 오브젝트만 포함하기 위해 1부터 시작, 0은 자기 자신
-        enemy.GetComponent<Enemy>().Init(spawnData[GameManager.instance.getRandomEnemyId()], getLevel());
+        enemy.GetComponent<Enemy>().Init(GameManager.instance.spawnData[GameManager.instance.getRandomEnemyId()], getLevel());
     }
     void SpawnExplosion(int enemyPerSpawn){
         foreach( Transform sp in spawnPoint[1..]){
             for(int i = 0 ; i < enemyPerSpawn ; i++){
                 GameObject enemy = GameManager.instance.pool.Get(0);
                 enemy.transform.position = sp.position;  
-                enemy.GetComponent<Enemy>().Init(spawnData[GameManager.instance.getRandomEnemyId()], getLevel());
+                enemy.GetComponent<Enemy>().Init(GameManager.instance.spawnData[GameManager.instance.getRandomEnemyId()], getLevel());
             }
         }
     }
 
 
     public int getLevel(){
-        return Mathf.Min(level, spawnData.Length-1);
+        level = Mathf.FloorToInt(GameManager.instance.gameTime / levelTime);
+        return level;
+    }
+
+    public float getSpawnTime(){
+        return 1f / level;
     }
 
 }
