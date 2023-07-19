@@ -3050,7 +3050,7 @@ GameObject:
   - component: {fileID: 584687357}
   m_Layer: 0
   m_Name: Tilemap (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7811,7 +7811,7 @@ GameObject:
   - component: {fileID: 757627439}
   m_Layer: 0
   m_Name: Tilemap (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12328,7 +12328,7 @@ GameObject:
   - component: {fileID: 863598487}
   m_Layer: 0
   m_Name: Tilemap (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17389,7 +17389,7 @@ GameObject:
   - component: {fileID: 1067882579}
   m_Layer: 0
   m_Name: Tilemap (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22898,7 +22898,7 @@ GameObject:
   - component: {fileID: 1306260170}
   m_Layer: 0
   m_Name: Tilemap (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28317,7 +28317,7 @@ GameObject:
   - component: {fileID: 1575913241}
   m_Layer: 0
   m_Name: Tilemap (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33566,7 +33566,7 @@ GameObject:
   - component: {fileID: 1812247827}
   m_Layer: 0
   m_Name: Tilemap (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38540,7 +38540,7 @@ GameObject:
   - component: {fileID: 1876762139}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44429,7 +44429,7 @@ GameObject:
   - component: {fileID: 2131504237}
   m_Layer: 0
   m_Name: Tilemap (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

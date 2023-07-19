@@ -44,7 +44,7 @@ public class Box : MonoBehaviour
         
         Array typeValues = Enum.GetValues(typeof(Drop.TypeId));
         Drop.TypeId randomType = (Drop.TypeId)typeValues.GetValue(UnityEngine.Random.Range(1, typeValues.Length));
-
+        Debug.Log(randomType);
         Drop.DropBox(randomType, transform);
         gameObject.SetActive(false);
     }

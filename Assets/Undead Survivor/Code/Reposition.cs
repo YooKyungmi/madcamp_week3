@@ -26,7 +26,7 @@ public class Reposition : MonoBehaviour
                 diffX = Mathf.Abs(diffX);
                 diffY = Mathf.Abs(diffY);
                 
-                int distance = 60;
+                int distance = 40;
 
                 if (diffX>diffY){
                     transform.Translate(Vector3.right * dirX * distance);
