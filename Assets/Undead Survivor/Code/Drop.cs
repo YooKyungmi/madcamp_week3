@@ -64,7 +64,7 @@ public class Drop : MonoBehaviour
         Rigidbody2D player = GameManager.instance.player.rigid;
         float gravityScale = 1.0f;
 
-        Vector2 gravityDirection = (transform.position - player.transform.position).normalized;
+        Vector2 gravityDirection = (player.transform.position - transform.position).normalized;
         Vector2 gravityForce = gravityDirection * gravityScale;
         rigid.AddForce(gravityForce);
     }

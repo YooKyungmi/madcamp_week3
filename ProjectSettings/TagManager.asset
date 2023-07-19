@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Magnet
+  - Ground
+  - Area
+  - Bullet
+  - PlayDrop
+  - Enemy
+  - PlayerDrop
   layers:
   - Default
   - TransparentFX

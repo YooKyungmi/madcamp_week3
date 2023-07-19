@@ -36,9 +36,11 @@ public class Enemy : MonoBehaviour
         // GetCurrentAnimatorStateInfo 현재 상태 가져오는 함수
         if(!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             return;
-
+        Debug.Log(target.position);
+        Debug.Log(speed);
         Vector2 dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime; // 정규화 normalized, 프레임의 영향으로 결과가 달라지지  fixedDeltaTime
+        Debug.Log(nextVec);
         rigid.MovePosition(rigid.position+nextVec); //플레이어의 키입력 ㄱ밧을 더한 이동 = 몬스터 방향값을 더한 이동
         rigid.velocity = Vector2.zero;  // 부딪쳐도 안 밀려남
 

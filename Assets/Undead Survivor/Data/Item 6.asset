@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d89052ae967f19b49bbc4ef083c6af36, type: 3}
-  m_Name: Item 0
+  m_Name: Item 6
   m_EditorClassIdentifier: 
   itemType: 0
   itemId: 0
@@ -19,12 +19,7 @@ MonoBehaviour:
   itemIcon: {fileID: -181907988, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   baseDamage: 4.5
   baseCount: 3
-  damages:
-  - 0.5
-  - 1
-  - 1.5
-  - 2
-  - 3
-  counts: 0100000001000000010000000100000002000000
+  damages: 5
+  counts: 2
   projectile: {fileID: 1856011056023963372, guid: 0f768a8e393c4f0429893fa85dbd2713, type: 3}
   hand: {fileID: 143021600, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}

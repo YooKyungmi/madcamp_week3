@@ -212,6 +212,7 @@ public class GameManager : MonoBehaviour
     }
 
     public int getRandomEnemyId(){
+        if (enemyList.Count == 0) addEnemyList();
         int randomIndex = UnityEngine.Random.Range(0, enemyList.Count);
         int randomValue = enemyList[randomIndex];
         return randomValue;

@@ -55,6 +55,7 @@ public class Spawner : MonoBehaviour
     void Spawn(){
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1,spawnPoint.Length)].position;  //자식 오브젝트만 포함하기 위해 1부터 시작, 0은 자기 자신
+        Debug.Log(GameManager.instance.getRandomEnemyId());
         enemy.GetComponent<Enemy>().Init(GameManager.instance.spawnData[GameManager.instance.getRandomEnemyId()], getLevel());
     }
     void SpawnExplosion(int enemyPerSpawn){
@@ -74,7 +75,7 @@ public class Spawner : MonoBehaviour
     }
 
     public float getSpawnTime(){
-        return 1f / level;
+        return 1f / (level+1);
     }
 
 }
