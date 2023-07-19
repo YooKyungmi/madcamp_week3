@@ -11,6 +11,7 @@ TagManager:
   - PlayDrop
   - Enemy
   - PlayerDrop
+  - Drop
   layers:
   - Default
   - TransparentFX
