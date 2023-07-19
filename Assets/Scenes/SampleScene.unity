@@ -3689,6 +3689,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 0f1832042ca85cb4ea122020fda5f284, type: 2}
   - {fileID: 22100000, guid: 747010e83fabbb34ea01ce9587548937, type: 2}
   - {fileID: 22100000, guid: 5d1487c59ea8d9e49865a41faa4ab242, type: 2}
+  magnet: {fileID: 0}
 --- !u!70 &908671507
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4162,6 +4163,7 @@ MonoBehaviour:
   bombButton: {fileID: 0}
   bombButtonLock: {fileID: 0}
   enemyList: 
+  spawnData: []
 --- !u!1 &1067882577
 GameObject:
   m_ObjectHideFlags: 0
@@ -14806,7 +14808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: []
-  levelTime: 0
 --- !u!1 &1515247852
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class Gear : MonoBehaviour
 
         // Property Set
         type = data.itemType;
-        rate = data.damages[0];
+        rate = data.damages;
         ApplyGear();
     }
 
