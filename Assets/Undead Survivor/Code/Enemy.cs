@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour
             anim.SetBool("Dead",true);
             GameManager.instance.kill++;
             //GameManager.instance.GetExp(); // 여기를 Gem making 으로 바꿔ㅓ야 함.
-            Drop.DropGem(level);
+            Drop.DropGem(level, transform);
             if(GameManager.instance.isLive) AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
         }
     }
