@@ -15,7 +15,7 @@ Asset : https://assetstore.unity.com/packages/2d/undead-survivor-assets-pack-238
 > 캐릭터 선택
 
 플레이어 케릭터를 선택한다.
-
+![image](https://github.com/YooKyungmi/madcamp_week3/assets/52480724/d1d46592-3377-4f76-b92e-b778fb437c67)
 ### 전투
 자동으로 조준 및 사출되는 총과 주변을 도는 무기인 삽으로 몰려오는 적을 공격한다.
 
@@ -33,7 +33,13 @@ Asset : https://assetstore.unity.com/packages/2d/undead-survivor-assets-pack-238
 
 ### 드랍
 맵을 이동하다 보면 상자가 생성된다.
+![image](https://github.com/YooKyungmi/madcamp_week3/assets/52480724/1d538e3d-6650-4827-93f8-9d48786d9cee)
+
 상자를 깨면 아이템이 드랍된다.
 - 폭탄 : 맵의 모든 적을 죽인다.
 - 자석 : 맵의 모든 아이템에 인력을 설정한다.
 - 포션 : 체력을 회복한다.
+
+### 업적
+게임 진행 상황에 따라 새로운 캐릭터가 해금된다.
+![image](https://github.com/YooKyungmi/madcamp_week3/assets/52480724/7b88cecd-4d6e-490e-8683-3807f72e7d4d)
