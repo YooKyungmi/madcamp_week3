@@ -15,6 +15,7 @@ public class Item : MonoBehaviour
     Text textDesc;
 
     void Awake(){
+        Debug.Log(GetComponentsInChildren<Image>().Length);
         icon = GetComponentsInChildren<Image>()[1];
         icon.sprite = data.itemIcon;
 
