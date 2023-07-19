@@ -67,10 +67,11 @@ public class Enemy : MonoBehaviour
 
     public void Init(SpawnData data, int lv)
     {
+        lv++;
         if (anim == null)
             Debug.Log("error");
         anim.runtimeAnimatorController = animCon[data.spriteType];
-        speed = data.speed * (1f + 0.3f * Mathf.Log(10, lv));
+        speed = data.speed * (1f + 0.3f * Mathf.Log(lv, 10));
         maxHealth = data.health * lv;
         health = data.health * lv;
         level = lv;

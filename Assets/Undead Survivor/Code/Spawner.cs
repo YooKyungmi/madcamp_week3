@@ -47,6 +47,8 @@ public class Spawner : MonoBehaviour
         if (newEnemyTimer > 30f){
             newEnemyTimer = 0;
             GameManager.instance.addEnemyList();
+            Box box = GameManager.instance.pool.Get(4).GetComponent<Box>();
+            box.transform.position = spawnPoint[Random.Range(1,spawnPoint.Length)].position;
         }
 
 

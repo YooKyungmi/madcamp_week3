@@ -7,8 +7,8 @@ public class Drop : MonoBehaviour
     public enum TypeId { Exp=0, Potion=1, Magnet=2, Bomb=3 }
     TypeId typeId;
     Rigidbody2D rigid;
-    int level ;
-    bool touched;
+    public int level ;
+    public bool touched;
 
     public static void DropBox(TypeId typeId, Transform trans){
         if (typeId == TypeId.Exp)return;
@@ -56,6 +56,7 @@ public class Drop : MonoBehaviour
                 break;
             default: break;    
         }
+        gameObject.SetActive(false);
     }
 
     void FixedUpdate(){ // touched true 일 때 플레이어로 인력 추가

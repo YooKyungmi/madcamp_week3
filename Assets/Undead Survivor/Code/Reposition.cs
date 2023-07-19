@@ -39,7 +39,7 @@ public class Reposition : MonoBehaviour
                     transform.Translate(Vector3.right * dirX * distance);
                 }
 
-                GameObject box = GameManager.instance.pool.Get(5);
+                GameObject box = GameManager.instance.pool.Get(4);
                 Vector3 ran = new Vector3(Random.Range(-10,10), Random.Range(-10,10), 0);
                 box.transform.position = ran + transform.position; 
 
