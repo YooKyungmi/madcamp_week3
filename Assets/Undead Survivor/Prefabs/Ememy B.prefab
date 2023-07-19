@@ -160,7 +160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1220e18080be084d86390dd656b0abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
   speed: 1.5
+  health: 0
+  maxHealth: 0
+  animCon: []
   target: {fileID: 0}
 --- !u!114 &6374142975203924463
 MonoBehaviour:
