@@ -4023,6 +4023,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 0f1832042ca85cb4ea122020fda5f284, type: 2}
   - {fileID: 22100000, guid: 747010e83fabbb34ea01ce9587548937, type: 2}
   - {fileID: 22100000, guid: 5d1487c59ea8d9e49865a41faa4ab242, type: 2}
+  magnet: {fileID: 0}
 --- !u!70 &908671507
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

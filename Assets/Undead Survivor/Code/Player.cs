@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     SpriteRenderer spriter;
     Animator anim;
     public RuntimeAnimatorController[] animCon;
-    public 
+    public GameObject magnet;
 
     void Awake() {
         rigid = GetComponent<Rigidbody2D>();

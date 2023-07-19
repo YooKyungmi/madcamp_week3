@@ -32,11 +32,14 @@ public class Item : MonoBehaviour
         switch(data.itemType){
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
-                textDesc.text = string.Format(data.itemDesc,data.damages[level] * 100,data.counts[level]);
+                textDesc.text = string.Format(data.itemDesc,data.damages * 100 * level,data.counts*level);
                 break;
             case ItemData.ItemType.Glove:
             case ItemData.ItemType.Shoe:
-                textDesc.text = string.Format(data.itemDesc,data.damages[level]* 100);
+                textDesc.text = string.Format(data.itemDesc,data.damages * 100 * level);
+                break;
+            case ItemData.ItemType.Magnet:
+                textDesc.text = string.Format(data.itemDesc,data.damages * level);
                 break;
             default:
                 textDesc.text = string.Format(data.itemDesc);
@@ -58,8 +61,8 @@ public class Item : MonoBehaviour
                 int nextCount = 0;
                 
                 // 처음 이후의 레빌업은 데미지와 횟수를 계산
-                nextDamage += data.baseDamage * data.damages[level];
-                nextCount += data.counts[level];
+                nextDamage += data.baseDamage * data.damages * level;
+                nextCount += data.counts*level;
 
                 weapon.LevelUp(nextDamage,nextCount);
                 }
@@ -67,13 +70,13 @@ public class Item : MonoBehaviour
                 break;
             case ItemData.ItemType.Glove:
             case ItemData.ItemType.Shoe:
-                if (level ==0){
+                if (level == 0){
                 GameObject newGear = new GameObject();
                 gear = newGear.AddComponent<Gear>();
                 gear.Init(data);
                 }
                 else {
-                    float nextRate = data.damages[level];
+                    float nextRate = data.damages*level;
                     gear.LevelUp(nextRate);
                 }
                 level++;
@@ -81,10 +84,13 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.Heal:
                 GameManager.instance.health = GameManager.instance.maxHealth;
                 break;
-        
+            case ItemData.ItemType.Magnet:
+                CircleCollider2D magnetCol = GameManager.instance.player.magnet.GetComponent<CircleCollider2D>();
+                magnetCol.radius = data.damages * level;
+                break;
         }
-        if (level == data.damages.Length){
-            GetComponent<Button>().interactable = false;
-        }
+        // if (level == data.damages.Length){
+        //     GetComponent<Button>().interactable = false;
+        // }
     }
 }
