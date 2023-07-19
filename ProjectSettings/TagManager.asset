@@ -8,6 +8,8 @@ TagManager:
   - Area
   - Enemy
   - Bullet
+  - Magnet
+  - PlayerDrop
   layers:
   - Default
   - TransparentFX

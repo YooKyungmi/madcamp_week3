@@ -2367,7 +2367,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9.069445
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3666,7 +3666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &908671506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3683,6 +3683,7 @@ MonoBehaviour:
   speed: 3
   scanner: {fileID: 0}
   hands: []
+  rigid: {fileID: 0}
   animCon:
   - {fileID: 9100000, guid: cbe769f5524ee7348a2980e3da12e126, type: 2}
   - {fileID: 22100000, guid: 0f1832042ca85cb4ea122020fda5f284, type: 2}
@@ -4150,13 +4151,17 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 03000000050000000a0000001e0000003c0000006400000096000000d20000001801000068010000c201000058020000
   player: {fileID: 908671506}
   uiLevelUp: {fileID: 1587238819}
   pool: {fileID: 2012574467}
   uiResult: {fileID: 514944736}
   enemyCleaner: {fileID: 1446467080}
   playerId: 0
+  bomb: 0
+  magnet: {fileID: 0}
+  bombButton: {fileID: 0}
+  bombButtonLock: {fileID: 0}
+  enemyList: 
 --- !u!1 &1067882577
 GameObject:
   m_ObjectHideFlags: 0
@@ -14801,15 +14806,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: []
-  spawnData:
-  - spawnTime: 0.7
-    spriteType: 0
-    health: 10
-    speed: 1.5
-  - spawnTime: 0.4
-    spriteType: 1
-    health: 15
-    speed: 2.3
   levelTime: 0
 --- !u!1 &1515247852
 GameObject:
