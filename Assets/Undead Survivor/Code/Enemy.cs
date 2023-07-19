@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int level;
     public float speed;
     public float health;
     public float maxHealth;
@@ -62,14 +63,15 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
     }
 
-    public void Init(SpawnData data)
+    public void Init(SpawnData data, int lv)
     {
         if (anim == null)
             Debug.Log("error");
         anim.runtimeAnimatorController = animCon[data.spriteType];
-        speed = data.speed;
-        maxHealth = data.health;
-        health = data.health;
+        speed = data.speed * (1f + 0.3f * Mathf.Log(10, lv));
+        maxHealth = data.health * lv;
+        health = data.health * lv;
+        level = lv;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -89,7 +91,8 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Dead",true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            //GameManager.instance.GetExp(); // 여기를 Gem making 으로 바꿔ㅓ야 함.
+            Drop.DropGem(level);
             if(GameManager.instance.isLive) AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
         }
     }
@@ -106,4 +109,5 @@ public class Enemy : MonoBehaviour
     void Dead(){
         gameObject.SetActive(false);
     }
+
 }

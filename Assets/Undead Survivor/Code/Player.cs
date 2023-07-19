@@ -9,10 +9,11 @@ public class Player : MonoBehaviour
     public float  speed;
     public Scanner scanner;
     public Hand[] hands;
-    Rigidbody2D rigid;
+    public Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator anim;
     public RuntimeAnimatorController[] animCon;
+    public 
 
     void Awake() {
         rigid = GetComponent<Rigidbody2D>();

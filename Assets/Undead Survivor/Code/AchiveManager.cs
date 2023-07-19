@@ -11,7 +11,8 @@ public class AchiveManager : MonoBehaviour
 	enum Achive{ UnlockPotato, UnlockBean}
 	Achive[] achives;
     public GameObject uiNotice;
-    WaitForSecondsRealtime wait;void Awake(){
+    WaitForSecondsRealtime wait;
+	void Awake(){
 		achives = (Achive[])Enum.GetValues(typeof(Achive));
 		wait = new WaitForSecondsRealtime(5);
 
