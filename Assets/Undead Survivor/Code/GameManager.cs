@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void GameStart(int id) {
         health = maxHealth;
         playerId = id;
+        Debug.Log(playerId + "3333");
         player.gameObject.SetActive(true);
         uiLevelUp.Select(playerId % 2);  // 임시 스크립트 (첫번째 캐릭터 선택)
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);

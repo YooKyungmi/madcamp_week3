@@ -30,7 +30,15 @@ public class Player : MonoBehaviour
         inputVec.y=Input.GetAxisRaw("Vertical");
     }
 
+private IEnumerator StartAfterDelay()
+    {
+        yield return new WaitForSeconds(1);  // wait for 1 second
+        // Your code here
+    }
+
     void OnEnable(){
+        StartCoroutine(StartAfterDelay());
+        Debug.Log(GameManager.instance.playerId + "------------------");
         anim.runtimeAnimatorController  = animCon[GameManager.instance.playerId]; 
         speed *= Character.Speed;
     }

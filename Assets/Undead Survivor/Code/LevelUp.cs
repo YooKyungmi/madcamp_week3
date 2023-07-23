@@ -45,9 +45,9 @@ public class LevelUp : MonoBehaviour
         // 2. 그 중에서 랜덤 3개 아이템 활성화
         int[] ran = new int[3];
         while(true){
-            ran[0] = Random.Range(0,items.Length);
-            ran[1] = Random.Range(0,items.Length);
-            ran[2] = Random.Range(0,items.Length);
+            ran[0] = Random.Range(0,5);
+            ran[1] = Random.Range(0,5);
+            ran[2] = Random.Range(0,5);
 
             if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
                 break;
